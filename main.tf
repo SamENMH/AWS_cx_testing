@@ -49,13 +49,13 @@ module "eks" {
   source  = "terraform-aws-modules/eks/aws"
   version = "21.0.9"
 
-  cluster_name    = local.cluster_name
-  cluster_version = "1.33"
+  name    = local.cluster_name
+  version = "1.33"
 
-  cluster_endpoint_public_access           = true
+  endpoint_public_access           = true
   enable_cluster_creator_admin_permissions = true
 
-  cluster_addons = {
+  addons = {
     aws-ebs-csi-driver = {
       service_account_role_arn = module.irsa-ebs-csi.iam_role_arn
     }

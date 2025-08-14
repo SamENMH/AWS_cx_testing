@@ -1,5 +1,5 @@
 locals {
-  cluster_name = "sandbox-vpc-eks-test"
+  cluster_name = "eks-test"
 }
 
 module "vpc_eks" {

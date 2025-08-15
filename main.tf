@@ -48,7 +48,7 @@ module "vpc" {
 
 }
 
-resource "aws_efs_file_system" "eks-pv" {"
+resource "aws_efs_file_system" "eks-pv" {
 
   tags = {
     Name = "eks"

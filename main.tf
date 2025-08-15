@@ -50,11 +50,11 @@ module "vpc" {
 
 
 resource "aws_s3_bucket" "archives" {
-  bucket = "cxarchives"
+  bucket = "cxtesingsamarchives"
 
 }
 
 resource "aws_s3_bucket" "logs" {
-  bucket = "cxlogs"
+  bucket = "cxtestingsamlogs"
 
 }

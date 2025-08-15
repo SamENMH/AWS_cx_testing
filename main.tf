@@ -48,9 +48,12 @@ module "vpc" {
 
 }
 
-resource "aws_efs_file_system" "eks-pv" {
 
-  tags = {
-    Name = "eks"
-  }
+module "s3-archive" {
+source = "coralogix/aws/coralogix//modules/provisioning/s3-archive"
+
+aws_region = "eu-west-1"
+logs_bucket_name = "CoralogixTestingArciveBucket"
+metrics_bucket_name = "CoralogixTestingLogsBucket"
+
 }

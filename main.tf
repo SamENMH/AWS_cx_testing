@@ -50,11 +50,11 @@ module "vpc" {
 
 
 resource "aws_s3_bucket" "archives" {
-  bucket = "CoralogixTestingArchiveBucket"
+  bucket = "cxarchives"
 
 }
 
 resource "aws_s3_bucket" "logs" {
-  bucket = "CoralogixTestingLogsBucket"
+  bucket = "cxlogs"
 
 }

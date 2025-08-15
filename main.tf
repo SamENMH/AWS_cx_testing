@@ -49,11 +49,12 @@ module "vpc" {
 }
 
 
-module "s3-archive" {
-source = "coralogix/aws/coralogix//modules/provisioning/s3-archive"
+resource "aws_s3_bucket" "archives" {
+  bucket = "CoralogixTestingArchiveBucket"
 
-aws_region = "eu-west-1"
-logs_bucket_name = "CoralogixTestingArciveBucket"
-metrics_bucket_name = "CoralogixTestingLogsBucket"
+}
+
+resource "aws_s3_bucket" "logs" {
+  bucket = "CoralogixTestingLogsBucket"
 
 }

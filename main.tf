@@ -50,7 +50,7 @@ module "vpc" {
 
 
 module "s3-archive" {
-source = "coralogix/aws/coralgix//modules/provisioning/s3-archive"
+source = "coralogix/aws/coralogix//modules/provisioning/s3-archive"
 
 logs_bucket_name = "CoralogixTestingArciveBucket"
 metrics_bucket_name = "CoralogixTestingLogsBucket"

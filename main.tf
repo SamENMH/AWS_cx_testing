@@ -48,9 +48,11 @@ module "vpc" {
 
 }
 
-resource "aws_efs_file_system" "eks-pv" {
+
+resource "aws_s3_bucket" "cx-testing" {
+  bucket = "cx-test"
 
   tags = {
-    Name = "eks"
+    Environment = "Dev"
   }
 }

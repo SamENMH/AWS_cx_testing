@@ -49,10 +49,10 @@ module "vpc" {
 }
 
 
-resource "aws_s3_bucket" "cx-testing" {
-  bucket = "cx-test"
+module "s3-archive" {
+source = "coralgix/aws/coralgix//modules/provisioning/s3-archive
 
-  tags = {
-    Environment = "Dev"
-  }
+logs_bucket_name = "CoralogixTestingArciveBucket"
+metrics_bucket_name = "CoralogixTestingLogsBucket"
+
 }

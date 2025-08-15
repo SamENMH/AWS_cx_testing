@@ -52,7 +52,7 @@ module "vpc" {
 module "s3-archive" {
 source = "coralogix/aws/coralogix//modules/provisioning/s3-archive"
 
-aws_region = "eu-west-2"
+aws_region = "eu-west-1"
 logs_bucket_name = "CoralogixTestingArciveBucket"
 metrics_bucket_name = "CoralogixTestingLogsBucket"
 
